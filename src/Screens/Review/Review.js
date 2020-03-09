@@ -120,12 +120,12 @@ class Review extends React.Component{
                                             <Col sm={8}><p className="popularHeaderTitle">Testimonials</p></Col>
                                         </Row>
                                     </Col>
-                                    {this.state.testimonialList.length < 0 ?
+                                    {this.state.testimonialList.length > 0 ?
+                                        <Testimonial testimonials={this.state.testimonialList} />                                    
+                                    :                                     
                                         <div className="loadSpin">
                                             <Spinner animation="grow" variant="warning" />
                                         </div>
-                                    :                                     
-                                        <Testimonial testimonials={this.state.testimonialList} />                                    
                                     }
                                 </div>
                             </Col>

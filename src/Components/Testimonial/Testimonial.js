@@ -50,7 +50,20 @@ const Testimonial = ({testimonials}) => {
                         </Col>
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey={i}>
-                        <Card.Body>Hello! I'm the body</Card.Body>
+                        <Card border="light" className="accordionBody">
+                            <Card.Body className="accordionBodyText">{testimonials[i].userTestimonial}</Card.Body>
+                            <Row className="justify-content-md-center">
+                                <Col xs lg="1"></Col>
+                                <Col md="auto" className="testimonialAccordionBox">                                    
+                                    <Image className="testimonialUserImage" src="https://www.linuxtrainingacademy.com/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" roundedCircle />                                                                        
+                                    <div className="userInfo">
+                                        <p>- {testimonials[i].username}</p>
+                                        <p>{testimonials[i].userCompany}</p>
+                                    </div>                                    
+                                </Col>
+                                <Col xs lg="1"></Col>
+                            </Row>
+                        </Card>
                     </Accordion.Collapse>                
                 </Accordion>
             </Row>
