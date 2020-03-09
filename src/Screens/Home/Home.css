@@ -1,0 +1,33 @@
+.dashboard{
+    margin: 0;
+    padding: 0;    
+    background: rgb(248,232,124);
+}
+
+.dashboardImage{
+    display: block;
+    margin: auto auto;
+    height: 500px;
+    width: 80%;
+}
+
+.textWrapper{        
+    margin-top: -25px;    
+    position: absolute;    
+    margin-left: 25%;        
+    width: 600px;
+}
+
+.homeTest{
+    display: flex;        
+    margin-bottom: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: rgb(245, 245, 245);
+}
+.jobLists{    
+    box-shadow: 3px 10px 3px rgb(228, 228, 228);
+}
+.jobDesc{    
+    box-shadow: 10px 10px 3px rgb(221, 221, 221);
+}

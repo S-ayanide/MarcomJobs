@@ -1,0 +1,53 @@
+.card{
+    width: 100%;                     
+    height: 120px;
+    display: inline-block;
+    color: black;
+}
+
+.img{
+    float:left;  
+    position: absolute;    
+    width:30%;           
+    height:100px;
+    text-align: center;
+    display: block; 
+    margin-top: 5%;
+}
+
+.cardImg{
+    height: 70px;
+    width: 70px;  
+}
+
+.cardDetails{
+    float:left;  
+    position: absolute;
+    margin-left: 30%;
+    background: rgb(247, 247, 247);
+    width:70%;
+    padding: 0.7rem; 
+    height:115px; 
+}
+
+.cardDetails a{
+    text-decoration: none;
+    color: black;
+}
+
+.cardDetails h4{
+    font-size: 20px;
+}
+
+.cardDetails a:hover{
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.role{
+    font-size: 16px;    
+}
+
+.location{
+    font-size: 14px;
+}

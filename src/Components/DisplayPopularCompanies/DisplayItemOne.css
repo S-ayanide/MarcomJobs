@@ -1,0 +1,11 @@
+.item{
+    text-align: center;
+    padding: 1.5em;    
+    background: white;
+    margin: 1px 1px;
+}
+
+.popularImage{    
+    height: 90%;
+    width: 95px;
+}

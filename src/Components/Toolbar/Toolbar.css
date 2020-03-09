@@ -1,0 +1,13 @@
+.marcomjobs_logo{
+    height: 60px;
+    width: 150px;    
+}
+
+.navbar{
+    background: rgb(234,240,241);   
+}
+
+.navbar_nav{
+    margin-left: 20px;
+    font-weight: bold;
+}

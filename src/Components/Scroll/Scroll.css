@@ -1,0 +1,8 @@
+.child{
+    overflow-y: scroll;
+    height: 400px;
+    border: 0px solid black;  
+    width: 100%;    
+    box-shadow: 3px 10px 3px rgb(228, 228, 228);
+    background: #fffcf5;
+}

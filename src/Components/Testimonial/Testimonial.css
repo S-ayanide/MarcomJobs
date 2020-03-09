@@ -1,0 +1,38 @@
+.testimonialItem{    
+    text-align: center;
+    padding: 0.5em;    
+    background: white;
+    box-shadow: inset -3px -3px 5px #ffffff70, inset 3px 3px 15px #acacac90;
+    margin: 3px 1px;
+    border-radius: 7px;
+}
+
+.testimonialCard{
+    background: rgb(255, 251, 251) !important;
+    box-shadow: inset -3px -3px 5px #ffffff70, inset 3px 3px 15px #acacac90;
+}
+
+.userImage{
+    display: block;
+    margin-left: 15%;
+    margin-right: auto;
+    margin-top: 65%;
+    width: 50px;    
+    height: 50px;
+}
+
+.userInfo{
+    text-align: left;
+    margin-top: 20%;
+}
+
+.userInfo p{
+    font-weight: 600;
+    line-height: 7px;
+}
+
+.testimonialDropdown{
+    display: block;
+    margin-top: 40%;
+    margin-left: 50%;
+}

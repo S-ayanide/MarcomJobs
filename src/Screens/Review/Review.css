@@ -1,0 +1,38 @@
+.popular{
+    padding-top: 3%;  
+    background: rgb(245,245,245);
+    padding-bottom: 3%;
+}
+
+.popularHeader{
+    padding: 1rem;
+    text-align: center;
+    background: white;
+    margin: 2px 0px;
+    margin-bottom: 3%;
+}
+
+.popularHeaderTitle{
+    text-align: left;
+    font-weight: 700;
+    font-size: 25px;    
+}
+
+.loadSpin{
+    position: absolute;    
+    left: 50%;
+    padding-bottom: 5%;
+}
+
+.testimonialDiv{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.testimonialHeader{
+    padding: 1.3rem;
+    text-align: center;
+    background: rgb(245,245,245);
+    margin: 2px 0px;
+    margin-bottom: 3%;
+}
