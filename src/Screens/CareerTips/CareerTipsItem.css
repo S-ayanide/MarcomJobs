@@ -1,5 +1,4 @@
-.box {
-    margin-top: 2%;
+.box {    
     padding-top: 5%;
     padding-left: 5%;
     background: #f0f1f2;
@@ -16,6 +15,7 @@
 }
 
 .content_title{
+    padding-top: 10%;
     font-size: 50px;    
 }
 

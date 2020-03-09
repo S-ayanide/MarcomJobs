@@ -3,7 +3,7 @@ import * as Markdown from 'react-markdown'
 import moment from 'moment'
 import './CareerTipsItem.css'
 
-const NewsItem = (props) => (    
+const CareerTipsItem = (props) => (    
     <div className="box">
         <article className="media">            
             <div className="media-content">
@@ -40,4 +40,4 @@ const NewsItem = (props) => (
     </div>    
 )
 
-export default NewsItem;
+export default CareerTipsItem;

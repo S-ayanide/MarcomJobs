@@ -1,15 +1,11 @@
-.news_main{
-    margin-top: 5%;
-}
-
-.latestNews_text{
+.latestcareertips_text{
     margin-top: 8%;
     margin-left: 42%;
     margin-bottom: 3%;
 }
 
 @media(max-width: 768px){
-    .latestNews_text{
+    .latestcareertips_text{
         margin-top: 10%;
         font-size: 25px;
         margin-left: 30%;
