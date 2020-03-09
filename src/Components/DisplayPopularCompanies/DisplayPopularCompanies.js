@@ -1,16 +1,16 @@
 import React from "react";
-import Rater from '../../Components/Rater/Rater'
-import './DisplayItemOne.css';
+import Rater from '../Rater/Rater'
+import './DisplayItem.css';
 import Card from 'react-bootstrap/Card'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 
-const DisplayPopularCompaniesOne = ({companyList}) => {
+const DisplayPopularCompanies = ({companyList, startingNumber, endingNumber}) => {
     
     const companyArr = companyList.map((name,i) => {
-        if(i<3){
+        if(i>= startingNumber && i<endingNumber){
             return(
                 <Col className="item"> 
                     <Row>
@@ -45,4 +45,4 @@ const DisplayPopularCompaniesOne = ({companyList}) => {
     );
 };
 
-export default DisplayPopularCompaniesOne;
+export default DisplayPopularCompanies;

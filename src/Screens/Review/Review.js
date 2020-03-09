@@ -1,7 +1,6 @@
 import React from 'react';
 import './Review.css'
-import DisplayPopularCompaniesOne from '../../Components/DisplayPopularCompanies/DisplayPopularCompaniesOne'
-import DisplayPopularCompaniesTwo from '../../Components/DisplayPopularCompanies/DisplayPopularCompaniesTwo'
+import DisplayPopularCompanies from '../../Components/DisplayPopularCompanies/DisplayPopularCompanies'
 import Rater from '../../Components/Rater/Rater'
 import Testimonial from '../../Components/Testimonial/Testimonial'
 import app from '../../Config/firebaseConfig';
@@ -97,8 +96,8 @@ class Review extends React.Component{
                                 </Col>                                
                                 {this.state.popularList.length > 0 ?
                                     <div>
-                                        <DisplayPopularCompaniesOne companyList={this.state.popularList} />                  
-                                        <DisplayPopularCompaniesTwo companyList={this.state.popularList} />      
+                                        <DisplayPopularCompanies companyList={this.state.popularList} startingNumber={0} endingNumber={3}/>                  
+                                        <DisplayPopularCompanies companyList={this.state.popularList} startingNumber={3} endingNumber={6}/>                                             
                                     </div> 
                                 :   
                                     <div className="loadSpin">

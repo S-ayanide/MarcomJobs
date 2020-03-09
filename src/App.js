@@ -4,6 +4,8 @@ import Toolbar from './Components/Toolbar/Toolbar';
 import Home from './Screens/Home/Home';
 import Review from './Screens/Review/Review'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import CareerTips from './Screens/CareerTips/CareerTips';
+import CareerTipsPost from './Screens/CareerTips/CareerTipsPost/CareerTipsPost'
 
 class App extends Component {
 
@@ -15,7 +17,9 @@ class App extends Component {
         <Router>
           <Switch>
             <Route path="/" exact component={Home} />                          
-            <Route path="/reviews" exact component={Review} />            
+            <Route path="/reviews" exact component={Review} />   
+            <Route path="/careerTips" exact component={CareerTips} />            
+            <Route path="/careerTips/:careerTipsPost" component={CareerTipsPost} />         
           </Switch>
         </Router>
       </div> 
