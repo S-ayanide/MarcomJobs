@@ -38,7 +38,7 @@ const Testimonial = ({testimonials}) => {
                                         <Card.Body>
                                             <Card.Title>{testimonials[i].userCompany}</Card.Title>
                                             <Card.Subtitle className="mb-2">
-                                                <Rater />
+                                                <Rater size={13}/>
                                             </Card.Subtitle>                                    
                                         </Card.Body>
                                     </Card>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa'
 import './Rater.css';
 
-const Rater = () => {
+const Rater = (props) => {
 
     const [rating, setRating] = useState(null);
     const [hover, setHover] = useState(null);
@@ -24,7 +24,7 @@ const Rater = () => {
                         <FaStar 
                             className="star" 
                             color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9" } 
-                            size={13}
+                            size={props.size}
                             onMouseEnter={() => setHover(ratingValue)}
                             onMouseOut={()=> setHover(null)}
                         />

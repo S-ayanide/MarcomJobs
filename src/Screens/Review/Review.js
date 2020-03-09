@@ -2,11 +2,13 @@ import React from 'react';
 import './Review.css'
 import DisplayPopularCompaniesOne from '../../Components/DisplayPopularCompanies/DisplayPopularCompaniesOne'
 import DisplayPopularCompaniesTwo from '../../Components/DisplayPopularCompanies/DisplayPopularCompaniesTwo'
+import Rater from '../../Components/Rater/Rater'
 import Testimonial from '../../Components/Testimonial/Testimonial'
 import app from '../../Config/firebaseConfig';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Card from 'react-bootstrap/Card'
 import { MdBusinessCenter, MdRateReview } from 'react-icons/md'
 import Spinner from 'react-bootstrap/Spinner'
 
@@ -106,6 +108,28 @@ class Review extends React.Component{
                             </Col>
                             <Col></Col>
                         </Row>                     
+                    </Container>
+                </div>
+                <div className="yourReview">
+                    <Container>
+                        <Row>
+                            <Col></Col>
+                            <Col xs={10}>
+                                <Card border="light" className="reviewCard">
+                                    <Card.Body>   
+                                    <Row>
+                                        <Col className="reviewContent title" sm={6}>Your Review</Col>                                  
+                                        <Col className="reviewContent" sm={4}>
+                                            <Card.Subtitle className="mb-2">
+                                                <Rater size={30} />
+                                            </Card.Subtitle> 
+                                        </Col>   
+                                        </Row>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                            <Col></Col>
+                        </Row>
                     </Container>
                 </div>
                 <div>

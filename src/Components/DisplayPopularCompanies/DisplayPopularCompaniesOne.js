@@ -24,7 +24,7 @@ const DisplayPopularCompaniesOne = ({companyList}) => {
                                 <Card.Body>
                                     <Card.Title>{companyList[i].companyName}</Card.Title>
                                     <Card.Subtitle className="mb-2">
-                                        <Rater />
+                                        <Rater size={13} />
                                     </Card.Subtitle>                                    
                                 </Card.Body>
                             </Card>

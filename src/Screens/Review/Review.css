@@ -24,6 +24,27 @@
     padding-bottom: 5%;
 }
 
+.yourReview{
+    background: rgb(255, 252, 204);
+    padding: 1rem;
+}
+
+.reviewCard{
+    box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #acacac90;
+}
+
+.reviewContent{
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.title{
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-top: -1%;
+    font-size: 25px;
+}
+
 .testimonialDiv{
     margin-top: 5%;
     margin-bottom: 5%;
