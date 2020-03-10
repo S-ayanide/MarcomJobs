@@ -1,15 +1,14 @@
-.box {    
-    padding-top: 5%;
-    padding-left: 5%;
-    background: #f0f1f2;
+.box {        
+    background: white;
+    width: 100%;
 }
 
-.content{
-    width: 95%;
-    padding-bottom: 5%;
+.content{       
+    padding-bottom: 5%;    
 }
 
 .content_shape{
+    padding-left: 5%;
     width: 75%;
     margin-left: 15%;
 }
@@ -20,8 +19,9 @@
 }
 
 .content_subtitle{
-    margin-top: -1%;
-    font-size: 30px;
+    margin-top: 1%;
+    font-size: 25px;
+    color: grey;    
     margin-bottom: 5%;
 }
 
@@ -60,6 +60,10 @@
 .level-item{
     margin-top: -25%; 
     padding-bottom: 30%;
+}
+
+.content_source{
+    margin-top: 5%;
 }
 
 @media(max-width: 768px){

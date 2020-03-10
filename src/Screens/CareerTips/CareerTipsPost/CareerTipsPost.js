@@ -33,7 +33,7 @@ const CareerTipsPost = ({ location: { state: { props } }}) => {
                                     </div>
                                 </div>
                             </div>
-                            <Markdown source={props.content} />
+                            <Markdown className="content_source" source={props.content} />
                         </div>
                     </div>     
                 </div>

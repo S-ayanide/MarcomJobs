@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import './CareerTips.css';
 import * as contentful from 'contentful';
 import CareerTipsCard from './CareerTipsCard/CareerTipsCard';
-import Scroll from '../../Components/Scroll/Scroll';
 import SearchBox from '../../Components/SearchBox/SearchBox';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Spinner from 'react-bootstrap/Spinner'
 
 class CareerTips extends Component {  
     state = {
@@ -48,19 +45,19 @@ class CareerTips extends Component {
 
         return (
             <div className="careertips_main">
-                <SearchBox searchChange={this.onSearchChange} />
-                <Scroll>
-                    {this.state.posts.map(({fields}, i) =>  {                            
-                        if((i+1)%3 !== 0){
-                            return(
-                                <div className="careerTipBox">
-                                    <CareerTipsCard key={i} {...fields} />                               
-                                </div>
-                            );
-                        }                   
-                    })
-                }                   
-                </Scroll>                
+                <SearchBox searchChange={this.onSearchChange} />                
+                <div className="careertips_box">
+                    {this.state.posts.length > 0 ? 
+                        this.state.posts.map(({fields}, i) =>  {                            
+                            return <CareerTipsCard values={i} {...fields} />
+                        })
+                    : 
+                        <div className="loadSpin">
+                            <Spinner animation="border" variant="warning" />
+                        </div>
+                    }
+                </div>
+                
             </div>
         )
     }

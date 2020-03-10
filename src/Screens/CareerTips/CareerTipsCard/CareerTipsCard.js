@@ -3,6 +3,8 @@ import './CareerTipsCard.css';
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
+import Markdown from 'react-markdown'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 
 const CareerTipsCards = (props) => {
 
@@ -22,28 +24,50 @@ const CareerTipsCards = (props) => {
 //                     </div>                
 //             </Link>            
 //         </div>
-    return (
-        
-        <div className="careerTipsDiv">
-            <Link className="link"
-                    to={{
-                        pathname: `/careerTips/${props.url}`,
-                        state: { props }
-                    }}>
-                <Card border="dark" className="careerTipsCard">
-                    <Card.Img variant="top" src={props.thumbnail} />
-                    <Card.Body>
-                        <Card.Title>{props.title}</Card.Title>
-                        <Card.Text>
-                            {props.subtitle}
-                        </Card.Text>
-                        <p>{props.author}</p>
-                        <Button variant="primary">Read More</Button>
-                    </Card.Body>
-                </Card> 
-            </Link>     
-        </div>
-    );    
+
+    if(props.values % 2 == 0){
+        return (
+            <div className="careerTipsDiv">
+                <div>
+                    <Link className="link"
+                            to={{
+                                pathname: `/careerTips/${props.url}`,
+                                state: { props }
+                            }}>
+                        <Card border="light" className="careerTipsCard">
+                            <Card.Img variant="top" src={props.thumbnail} />
+                            <Card.Body>
+                                <Card.Title>{props.title}</Card.Title>
+                                <Card.Text className="careerSubtitle">
+                                    {props.subtitle}
+                                </Card.Text>
+                                <br></br>
+                                <Button block="true" variant="dark">Read More</Button>
+                            </Card.Body>
+                        </Card> 
+                    </Link> 
+                </div>
+                
+                <div className="careerTipsInfoRight">
+                        <p className="infoHead">{props.title}</p>
+                        <hr className="infoLine"></hr>
+                        <Markdown className="infoContent" source={props.content.split(" ").splice(0,40).join(" ").concat('...')} />
+                        <br></br>
+                        <Link className="link"
+                            to={{
+                                pathname: `/careerTips/${props.url}`,
+                                state: { props }
+                            }}>
+                            <ButtonToolbar>
+                                    <Button block="true" variant="dark">Read More</Button>                            
+                            </ButtonToolbar>
+                        </Link>
+                </div>
+            </div>
+        );
+    }
+
+    return <div></div>              
 }
 
 export default CareerTipsCards;

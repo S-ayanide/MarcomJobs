@@ -1,7 +1,13 @@
-.latestcareertips_text{
-    margin-top: 8%;
-    margin-left: 42%;
-    margin-bottom: 3%;
+.careertips_box{
+    padding-top: 3%;
+    background: rgb(245,245,245);
+    padding-bottom: 3%;
+}
+
+.loadSpin{
+    position: absolute;    
+    left: 50%;
+    padding-bottom: 5%;
 }
 
 @media(max-width: 768px){

@@ -3,11 +3,41 @@
 }
 
 .careerTipsDiv{
-    margin: 2% 3%;
-    width: 30%;
+    display: flex;
+    margin: 2% 3%;        
 }
 
 .careerTipsCard {
-    background: white !important;        
-    height: 110%;    
+    background: white !important;      
+    box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #acacac90; 
+    height: 100%;    
+    width: 45%;
+}
+
+.careerSubtitle{    
+    font-size: 15px;
+    color: grey;
+}
+
+.careerTipsInfoRight{
+    margin-left: -20%;  
+    margin-top: 3%;  
+    width: 50%;
+}
+
+.infoHead{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.infoLine{
+    color: '#000000';
+    background-color: black;
+    height: .5;
+    border-color: black;
+}
+
+.infoContent{
+    margin-top: 10%;
+    font-size: 14px;
 }
