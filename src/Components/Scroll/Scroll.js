@@ -3,7 +3,7 @@ import './Scroll.css';
 
 const Scroll = (props) => {
     return (
-        <div className="child">                        
+        <div className="child" style={{height: `${props.height}px`}}>                        
             {props.children}                        
         </div>
     );

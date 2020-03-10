@@ -4,14 +4,17 @@
 
 .careerTipsDiv{
     display: flex;
-    margin: 2% 3%;        
+    background: rgb(245,245,245);
+    padding: 0 5%;    
+    padding-top: 3em; 
+    padding-bottom: 3em;           
 }
 
 .careerTipsCard {
     background: white !important;      
     box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #acacac90; 
     height: 100%;    
-    width: 45%;
+    width: 350px;
 }
 
 .careerSubtitle{    
@@ -20,9 +23,9 @@
 }
 
 .careerTipsInfoRight{
-    margin-left: -20%;  
+    margin-left: 15%;    
     margin-top: 3%;  
-    width: 50%;
+    width: 500px;
 }
 
 .infoHead{
@@ -38,6 +41,20 @@
 }
 
 .infoContent{
-    margin-top: 10%;
+    margin-top: 10%;    
     font-size: 14px;
+}
+
+.careerTipsDivLeft{
+    background: white;
+    display: flex;
+    padding: 0 5%;  
+    padding-top: 3em; 
+    padding-bottom: 3em;             
+}
+
+.careerTipsInfoLeft{       
+    margin-top: 4%;  
+    width: 500px;
+    margin-right: 170px;
 }

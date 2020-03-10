@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Scroll from '../../Components/Scroll/Scroll'
 import './CareerTips.css';
 import * as contentful from 'contentful';
 import CareerTipsCard from './CareerTipsCard/CareerTipsCard';
@@ -34,30 +35,33 @@ class CareerTips extends Component {
             searchField: event.target.value
         });        
     }
-
-    // else
-    //                         if(this.state.posts[i].fields.title.toLowerCase().includes(this.state.searchField.toLowerCase())) { 
-    //                             return <CareerTipsCard key={i} {...fields} />                                
-    //                         }
-
     
     render() {
 
         return (
             <div className="careertips_main">
-                <SearchBox searchChange={this.onSearchChange} />                
-                <div className="careertips_box">
-                    {this.state.posts.length > 0 ? 
-                        this.state.posts.map(({fields}, i) =>  {                            
-                            return <CareerTipsCard values={i} {...fields} />
-                        })
-                    : 
-                        <div className="loadSpin">
-                            <Spinner animation="border" variant="warning" />
-                        </div>
-                    }
+                <div className="careerTipsSearch">
+                    <SearchBox searchChange={this.onSearchChange} />                
                 </div>
-                
+                <div className="careerTipsScroll">
+                    <Scroll height={800}>
+                        <div className="careertips_box">
+                            {this.state.posts.length > 0 ? 
+                                this.state.posts.map(({fields}, i) =>  {   
+                                    if(this.state.searchField === ""){
+                                        return <CareerTipsCard values={i} {...fields} />    
+                                    }else if(this.state.posts[i].fields.title.toLowerCase().includes(this.state.searchField.toLowerCase())){
+                                        return <CareerTipsCard values={i} {...fields} />
+                                    }      
+                                })
+                            : 
+                                <div className="loadSpin">
+                                    <Spinner animation="border" variant="warning" />
+                                </div>
+                            }
+                        </div>
+                    </Scroll>
+                </div>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 .box {        
     background: white;
-    width: 100%;
+    width: 100%;    
 }
 
 .content{       
@@ -58,8 +58,8 @@
 }
 
 .level-item{
-    margin-top: -25%; 
-    padding-bottom: 30%;
+    margin-top: -20%; 
+    padding-bottom: 25%;
 }
 
 .content_source{

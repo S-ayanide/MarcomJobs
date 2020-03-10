@@ -1,6 +1,12 @@
-.careertips_box{
+.careerTipsSearch{  
+    margin-top: 3%;  
+}
+
+.careerTipsScroll{
     padding-top: 3%;
-    background: rgb(245,245,245);
+}
+
+.careertips_box{       
     padding-bottom: 3%;
 }
 
