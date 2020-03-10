@@ -32,7 +32,7 @@ const CareerTipsCards = (props) => {
                 <div>
                     <Link className="link"
                             to={{
-                                pathname: `/careerTips/${props.url}`,
+                                pathname: `/careerTips/${props.path}`,
                                 state: { props }
                             }}>
                         <Card border="light" className="careerTipsCard">
@@ -56,7 +56,7 @@ const CareerTipsCards = (props) => {
                         <br></br>
                         <Link className="link"
                             to={{
-                                pathname: `/careerTips/${props.url}`,
+                                pathname: `/careerTips/${props.path}`,
                                 state: { props }
                             }}>
                             <ButtonToolbar>
