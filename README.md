@@ -18,6 +18,7 @@ With the help of this project, users can:
 This URL has the application deployed in Netlify
 
 ## Screenshots
+<img src="./Screenshots/marcomjobs1.PNG" height="20px" width="20px" />
 
 ## Prerequisites
 Install Node JS
