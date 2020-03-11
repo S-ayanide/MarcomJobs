@@ -15,13 +15,15 @@ class CareerTips extends Component {
     client = contentful.createClient({
         space: 'gcsvcayxyrlh',
         accessToken: 'lW9XQDXeYtpYIQ_nmZyiRwosYFwQEu3TPE68gj1m8Cg'
-    })  
-    
+    })
+        
     componentDidMount() {
         this.fetchPosts().then(this.setPosts);
     }  
     
-    fetchPosts = () => this.client.getEntries()  
+    fetchPosts = () => this.client.getEntries({
+        'content_type': 'careerTips'
+    });
     
     setPosts = response => {
         this.setState({
@@ -49,6 +51,7 @@ class CareerTips extends Component {
                             {this.state.posts.length > 0 ? 
                                 this.state.posts.map(({fields}, i) =>  {   
                                     if(this.state.searchField === ""){
+                                        console.log(this.state.posts)
                                         return <CareerTipsCard values={i} {...fields} />    
                                     }else if(this.state.posts[i].fields.title.toLowerCase().includes(this.state.searchField.toLowerCase())){
                                         return <CareerTipsCard values={i} {...fields} />

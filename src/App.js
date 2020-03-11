@@ -5,6 +5,7 @@ import Home from './Screens/Home/Home';
 import Review from './Screens/Review/Review'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import CareerTips from './Screens/CareerTips/CareerTips';
+import Jobs from './Screens/Jobs/Jobs';
 import CareerTipsPost from './Screens/CareerTips/CareerTipsPost/CareerTipsPost'
 
 class App extends Component {
@@ -19,7 +20,8 @@ class App extends Component {
             <Route path="/" exact component={Home} />                          
             <Route path="/reviews" exact component={Review} />   
             <Route path="/careerTips" exact component={CareerTips} />            
-            <Route path="/careerTips/:careerTipsPost" component={CareerTipsPost} />         
+            <Route path="/careerTips/:careerTipsPost" component={CareerTipsPost} />  
+            <Route path="/jobs" component={Jobs} />
           </Switch>
         </Router>
       </div> 
