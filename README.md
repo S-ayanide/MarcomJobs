@@ -17,6 +17,8 @@ With the help of this project, users can:
 #### https://marcomjobs.netlify.com/
 This URL has the application deployed in Netlify
 
+## Screenshots
+
 ## Prerequisites
 Install Node JS
 Refer to https://nodejs.org/en/ to install nodejs
