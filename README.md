@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Marcomjobs
 
-## Available Scripts
+Marcomjobs is a job seekers platform assisting Vietnamese and Indian people to look for jobs as well as Job-related activities like Career Tips, Job Reviews, Educational Communities, etc
 
-In the project directory, you can run:
+### What is the use of this Repo
+This Project is a Job Seeker Assistant Project for both Vietnamese as well as Indian Job Seekers which demonstrates the following
+With the help of this project, users can:
+* Find Company Reviews provided by users
+* Users can search and apply for Jobs
+* Users can save their favourite jobs
+* Users will be able to give testimonials
+* Users can be subscribed to a newsletter keeping them up to date with the latest jobs
+* Users can view Career Tips from Experts at Marcomjobs
+* Users can be a part of Educational Community in Vietnam as well as India
 
-### `yarn start`
+## Live Application URL
+#### https://marcomjobs.netlify.com/
+This URL has the application deployed in Netlify
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Prerequisites
+Install Node JS
+Refer to https://nodejs.org/en/ to install nodejs
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Install create-react-app
+Install `create-react-app` npm package globally. This will help to easily run the project and also build the source files easily. Use the following command to install create-react-app
+```
+npm install -g create-react-app
+```
 
-### `yarn test`
+## Live Application URL
+The Application is deployed in https://aditya-sridhar.github.io/simple-reactjs-app
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###### Click on the link to see the application
 
-### `yarn build`
+## Cloning and Running the Application in local
+**Clone the project into local**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install all the npm packages. Go into the project folder and type the following command to install all npm packages
+```
+npm install
+```
+In order to run the application Type the following command
+```
+npm start
+```
+The Application Runs on localhost:**3000**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# Resources
+**create-react-app** : The following link has all the commands that can be used with create-react-app https://github.com/facebook/create-react-app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**ReactJS** : Refer to https://reactjs.org/ to understand the concepts of ReactJS
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**React Bootstrap** : Refer to https://react-bootstrap.github.io/getting-started/introduction/ to understand how to use React Bootstrap
