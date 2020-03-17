@@ -16,8 +16,8 @@ class Jobs extends React.Component{
     }  
     
     client = contentful.createClient({
-        space: 'x4mzjbvktisl',
-        accessToken: 'azxKyNV__AiQGdsF569psdfBf4qVsCeA_4HslUvxosg'
+        space: 'SPACE_ID',
+        accessToken: 'ACCESS_TOKEN'
     })
         
     componentDidMount() {
