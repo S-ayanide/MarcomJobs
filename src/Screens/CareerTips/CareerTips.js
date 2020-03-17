@@ -13,8 +13,8 @@ class CareerTips extends Component {
     }  
     
     client = contentful.createClient({
-        space: 'gcsvcayxyrlh',
-        accessToken: 'lW9XQDXeYtpYIQ_nmZyiRwosYFwQEu3TPE68gj1m8Cg'
+        space: 'SPACE_ID',
+        accessToken: 'ACCESS_TOKEN'
     })
         
     componentDidMount() {
