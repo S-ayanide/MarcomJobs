@@ -1,14 +1,13 @@
 import firebase from 'firebase';
 
 var firebaseConfig = {
-    apiKey: "AIzaSyBF33r89egE5cZiZobegSrbrGFB0LzfQ-E",
-    authDomain: "marcomjobs-3ff55.firebaseapp.com",
-    databaseURL: "https://marcomjobs-3ff55.firebaseio.com",
-    projectId: "marcomjobs-3ff55",
-    storageBucket: "marcomjobs-3ff55.appspot.com",
-    messagingSenderId: "292997189013",
-    appId: "1:292997189013:web:143810380800a0d31dba9c",
-    measurementId: "G-RKH7V604WE"
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_DOMAIN_NAME.firebaseapp.com",
+    databaseURL: "https://YOUR_FIREBASE_DATABSE_URL",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_BUCKET_ID",    
+    appId: "YOUR_APP_ID",
+    measurementId: "YOUR_MEASUREMENT_ID"
 };
 
 const app = firebase.initializeApp(firebaseConfig);
