@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import CareerTips from './Screens/CareerTips/CareerTips';
 import Jobs from './Screens/Jobs/Jobs';
 import CareerTipsPost from './Screens/CareerTips/CareerTipsPost/CareerTipsPost'
+import JobPost from './Screens/Jobs/JobPost/JobPost'
 
 class App extends Component {
 
@@ -22,6 +23,7 @@ class App extends Component {
             <Route path="/careerTips" exact component={CareerTips} />            
             <Route path="/careerTips/:careerTipsPost" component={CareerTipsPost} />  
             <Route path="/jobs" component={Jobs} />
+            <Route path="/jobs/:jobsPost" component={JobPost} />
           </Switch>
         </Router>
       </div> 

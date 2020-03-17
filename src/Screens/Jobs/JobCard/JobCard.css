@@ -1,0 +1,17 @@
+.jobPostDiv{
+    margin: 2% 0;
+}
+
+.jobPost{
+    height: 100%;    
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #fbff1840, 3px 3px 15px #acacac40;
+}
+
+.jobPostCard{
+    height: 150%;    
+}
+
+.jobPoints{
+    padding-bottom: 0.2rem;
+}

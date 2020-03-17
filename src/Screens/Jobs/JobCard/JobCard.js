@@ -8,20 +8,20 @@ const JobCard = (props) => {
 
     if(props.values <= 15){
         return(
-            <div>
-                <div>
+            <div className="jobPostDiv">
+                <div className="jobPost">
                     <Link className="link"
                         to={{
-                            pathname: `/Jobs/${props.path}`,
+                            pathname: `/jobs/${props.path}`,
                             state: { props }
                         }}>
-                        <Card border="light">                        
+                        <Card border="warning" className="jobPostCard">                        
                             <Card.Body>
                                 <Card.Title>{props.role}</Card.Title>
                                 <Card.Text>{props.companyName}</Card.Text>
                                 <Card.Text>{props.location}</Card.Text>
                                 <br></br>
-                                <Markdown source={props.points} /> 
+                                <Markdown source={props.companyPoints} className="jobPoints" />                                 
                             </Card.Body>
                         </Card> 
                     </Link> 
@@ -30,9 +30,7 @@ const JobCard = (props) => {
         );
     }
 
-    return(
-        <div></div>
-    );
+    return <div></div>
 }
 
 export default JobCard;

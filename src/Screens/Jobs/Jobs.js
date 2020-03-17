@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import Container from 'react-bootstrap/Container'
 import Spinner from 'react-bootstrap/Spinner'
+import JobFilter from './JobFilter/JobFilter'
 
 class Jobs extends React.Component{
 
@@ -15,17 +16,15 @@ class Jobs extends React.Component{
     }  
     
     client = contentful.createClient({
-        space: 'gcsvcayxyrlh',
-        accessToken: 'lW9XQDXeYtpYIQ_nmZyiRwosYFwQEu3TPE68gj1m8Cg'
+        space: 'x4mzjbvktisl',
+        accessToken: 'azxKyNV__AiQGdsF569psdfBf4qVsCeA_4HslUvxosg'
     })
         
     componentDidMount() {
         this.fetchPosts().then(this.setPosts);
     }  
     
-    fetchPosts = () => this.client.getEntries({
-        'content_type': 'jobs'
-    });
+    fetchPosts = () => this.client.getEntries();
     
     setPosts = response => {
         this.setState({
@@ -39,9 +38,10 @@ class Jobs extends React.Component{
             <div className="job_main">
                 <Container>
                     <Row>
-                        <Col></Col>
-                        <Col xs={6}>
-                            {console.log(this.state.jobs)}
+                        <Col>
+                            <JobFilter />
+                        </Col>
+                        <Col xs={6}>                                                     
                             {this.state.jobs.length > 0 ? 
                                 this.state.jobs.map(({fields}, i) =>  {                                       
                                     return <JobCard values={i} {...fields} />
