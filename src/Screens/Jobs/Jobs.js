@@ -20,7 +20,12 @@ const Jobs = () => {
     const client = contentful.createClient({
         space: process.env.REACT_APP_CONTENTFUL_JOBS_SPACE_ID,
         accessToken: process.env.REACT_APP_CONTENTFUL_JOBS_ACCESS_TOKEN
-    })
+    });
+
+    state = {
+        jobs: [],
+        searchField: ""
+    }      
 
     const [jobs, setJobs] = useState([]);
     const [loading, setLoading] = useState(false);    
