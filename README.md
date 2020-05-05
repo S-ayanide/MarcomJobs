@@ -16,6 +16,7 @@ With the help of this project, users can:
 ## Live Application URL
 #### https://marcomjobs.netlify.com/
 This URL has the application deployed in Netlify
+###### Click on the link to see the application
 
 ## Screenshots
 <img src="./Screenshots/marcomjobs1.PNG" height="300px" width="400px" /> <img src="./Screenshots/marcomjobs2.PNG" height="300px" width="400px" /> 
@@ -27,17 +28,6 @@ This URL has the application deployed in Netlify
 ## Prerequisites
 Install Node JS
 Refer to https://nodejs.org/en/ to install nodejs
-
-## Install create-react-app
-Install `create-react-app` npm package globally. This will help to easily run the project and also build the source files easily. Use the following command to install create-react-app
-```
-npm install -g create-react-app
-```
-
-## Live Application URL
-The Application is deployed in https://aditya-sridhar.github.io/simple-reactjs-app
-
-###### Click on the link to see the application
 
 ## Cloning and Running the Application in local
 **Clone the project into local**
