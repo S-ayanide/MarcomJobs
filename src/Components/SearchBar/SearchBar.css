@@ -1,0 +1,41 @@
+.searchbar_div{     
+    padding: 2rem;    
+    margin-bottom: 3%;
+}
+
+.searchbar_box{
+    width: 100%;
+    padding: 1rem 2rem;
+    align-items: center;
+    background: #2b303b;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;   
+    transition: all .55s ease;   
+}
+
+.searchbar_box:hover{
+    background-color: #343b49;
+}
+
+.searchbar_box:active{
+    background-color: #343b49;
+}
+
+.searchbar_box::-webkit-input-placeholder {
+    color: white;
+}
+  
+.searchbar_box:-moz-placeholder { /* Firefox 18- */
+    color: white;  
+}
+  
+.searchbar_box::-moz-placeholder {  /* Firefox 19+ */
+    color: white;  
+}
+  
+.searchbar_box:-ms-input-placeholder {  
+    color: white;  
+}

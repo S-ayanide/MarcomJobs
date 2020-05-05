@@ -1,21 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
+
 .dashboard{
     margin: 0;
     padding: 0;    
     background: rgb(248,232,124);
 }
 
-.dashboardImage{
-    display: block;
-    margin: auto auto;
-    height: 500px;
-    width: 80%;
+.textWrapper{        
+    background: rgb(0, 0, 0, 0.5);
+    color: white;
+    padding: 3em;
+    margin-top: -250px;
+    position: absolute;    
+    margin-left: 15%;
 }
 
-.textWrapper{        
-    margin-top: -25px;    
+.textWrapper p{
+    font-family: 'Arvo', serif;
+    margin-top: -5%;
+    margin-bottom: 15%;
+    text-align: center;
+}
+
+.cvWrapper{
+    background: rgb(0, 0, 0, 0.5);    
+    padding: 1em 1em;
+    margin-top: -250px;
     position: absolute;    
-    margin-left: 25%;        
-    width: 600px;
+    margin-left: 70%;
+}
+
+.cvWrapper_2{
+    background: rgb(245, 245, 245, 0.8);    
+    padding: 0.2em 3rem;    
+}
+
+.cvWrapper_2 p{    
+    margin-top: 15%;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+}
+
+.upload_label{
+    cursor: pointer;
+    background: #FBDD1D !important;
+    color: black !important;
+    font-size: 17px;
+    font-weight: 700;
+    border: none !important;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#upload-cv{
+    opacity: 0;
+    position: absolute; 
+    right: 0;   
+    z-index: -1;
+}
+
+.upload_cv_btn{
+    background: #FBDD1D !important;
+    color: black !important;
+    font-size: 17px;
+    font-weight: 700;
+    border: none !important;
+    margin-top: 30%;
+    margin-bottom: 10%;
+}
+
+.partnersDiv{        
+    background: rgb(245, 245, 245);
+    padding-top: 2%;
+}
+
+.partners{
+    width: 90%;    
+    margin-left: 5%;
+    background: white;
+    box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #acacac90;
 }
 
 .homeTest{
@@ -30,4 +96,32 @@
 }
 .jobDesc{    
     box-shadow: 10px 10px 3px rgb(221, 221, 221);
+}
+
+@media screen and (max-width: 768px){
+    .textWrapper{
+        margin-top: -30%;
+        width: 30%;
+        padding: 1.3rem;
+    }
+
+    .textWrapper p{
+        font-size: 14px;
+    }
+
+    .cvWrapper{
+        display: none;
+    }    
+
+    .cvWrapper_2{
+        display: none;
+    }
+
+    .upload_cv_btn{
+        display: none;
+    }
+
+    .partnersDiv{
+        display: none;
+    }
 }

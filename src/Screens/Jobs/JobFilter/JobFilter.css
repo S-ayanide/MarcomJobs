@@ -1,6 +1,7 @@
 .jobFilter{
     padding: 5%;
     margin: 5% 0;    
+    cursor: pointer;
     box-shadow: inset -3px -3px 5px #ffffff70, inset 3px 3px 15px #acacac90;
 }
 
@@ -12,7 +13,12 @@
 }
 
 .jobFilter li{
-    list-style: none;
+    list-style: none;    
     color: grey;
-    font-size: 14px;
+    font-size: 14px;    
+}
+
+.jobFilter li:hover{    
+    color: darkgrey;
+    font-weight: 700;
 }

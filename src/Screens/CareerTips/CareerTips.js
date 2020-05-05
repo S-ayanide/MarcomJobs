@@ -13,8 +13,8 @@ class CareerTips extends Component {
     }  
     
     client = contentful.createClient({
-        space: 'gcsvcayxyrlh',
-        accessToken: 'lW9XQDXeYtpYIQ_nmZyiRwosYFwQEu3TPE68gj1m8Cg'
+        space: process.env.REACT_APP_CONTENTFUL_CAREERTIPS_SPACE_ID,
+        accessToken: process.env.REACT_APP_CONTENTFUL_CAREERTIPS_ACCESS_TOKEN
     })
         
     componentDidMount() {
@@ -43,7 +43,7 @@ class CareerTips extends Component {
         return (
             <div className="careertips_main">
                 <div className="careerTipsSearch">
-                    <SearchBox searchChange={this.onSearchChange} />                
+                    <SearchBox searchChange={this.onSearchChange} placeholder={"Search Career Tips"}/>
                 </div>
                 <div className="careerTipsScroll">
                     <Scroll height={800}>

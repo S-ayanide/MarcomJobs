@@ -1,0 +1,39 @@
+.subscribeBody {
+    margin-top: 1%;
+    box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #acacac90;
+    height: 200px;
+    width: 24%;
+    color:black;
+    border-radius: 5px;
+    position: fixed;
+}
+
+.subscribeElements {
+    text-align: center;
+    padding-top: 6%;
+}
+
+.subscribeElements > h1{
+    font-size: 1rem;
+    margin-bottom: 10%;
+}
+
+.textInput {    
+    color: black;
+    font-size: 11px;
+    width: 90%;
+    margin-left: 6%;
+}
+
+.submitButton {
+    margin-top: 5%;
+    font-size: 12px;  
+    width: 90%;
+    margin-left: 5%;
+}
+
+.subscribeElements > p {
+    margin-top: 5%;
+    color: grey;
+    font-size: 10px;
+}

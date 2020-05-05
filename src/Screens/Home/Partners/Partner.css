@@ -1,0 +1,11 @@
+.partnerDiv{       
+    display: inline;
+    justify-content: start;
+    align-items: center;        
+}
+
+.partnerImage{
+    height: 90px;        
+    margin: 3% 4%;
+    object-fit: contain;
+}

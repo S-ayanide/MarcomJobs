@@ -66,6 +66,10 @@
     margin-top: 5%;
 }
 
+.social-buttons{
+    padding-top: 10%;
+}
+
 @media(max-width: 768px){
     .content_title{
         font-size: 20px;

@@ -10,16 +10,9 @@
     padding-bottom: 3em;           
 }
 
-.careerTipsCard {
-    background: white !important;      
-    box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #acacac90; 
-    height: 100%;    
-    width: 350px;
-}
-
-.careerSubtitle{    
-    font-size: 15px;
-    color: grey;
+.careerTipsThumbnail{
+    width: 450px;    
+    margin-top: 10%;
 }
 
 .careerTipsInfoRight{

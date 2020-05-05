@@ -1,0 +1,30 @@
+.thankYouBody {
+    margin-top: 5%;
+    box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #acacac90;
+    height: 200px;
+    color:black;
+    border-radius: 5px;
+    width: 24%;
+    position: fixed;
+}
+
+.thankYouElements {
+    text-align: center;
+    padding-top: 6%;
+}
+
+.thanksMessage {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.thumbsUp {
+    margin-top: 5%;
+    width: 10%;
+}
+
+.thankYouElements p{
+    margin-top: 5%;
+    color: grey;
+    font-size: 10px;
+}

@@ -1,0 +1,20 @@
+.omb_login{    
+    margin-top: 5%;
+}
+
+@media(min-width: 574px) and (max-width: 767px){
+    .omb_login{
+        margin-left: 30%;
+        width: 100%;
+    }
+
+    .omb_authTitle{
+        margin-right: 50%;
+    }
+}
+
+@media(max-width: 574px){
+    .omb_login{
+        width: 100%;
+    }
+}

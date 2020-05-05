@@ -1,0 +1,24 @@
+.companyImageDiv{            
+    width: 20px;
+    display: flex;    
+}
+
+.companyImage{  
+    position: absolute;  
+    margin-top: 10%;
+    height: 70px;
+    width: 80%;    
+    object-fit: contain;
+    margin-left: 10%;
+}
+
+.jobCardBody{
+    width: 100%;    
+    background: white;
+    margin-bottom: 1%;
+    box-shadow: -3px -3px 5px #ffffff70, 3px 3px 15px #acacac90;
+}
+
+.jobCollapse{
+    background: rgb(243, 239, 239);    
+}

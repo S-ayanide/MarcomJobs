@@ -1,0 +1,16 @@
+.carousel_images{
+    height: 300px;
+    object-fit: cover;    
+}
+
+@media (max-width: 500px){
+    .carousel_images{
+        height: 500px;        
+    }
+}
+
+/* @media screen and (min-width: 480px){
+    .carousel_images{
+        height: 650px;
+    }
+} */

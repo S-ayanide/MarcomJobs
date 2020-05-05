@@ -1,137 +1,133 @@
-import React from 'react';
-import CardList from '../../Components/CardList/CardList';
-import app from '../../Config/firebaseConfig';
+import React, { useState, useEffect } from 'react';
+import * as contentful from 'contentful'
+import CardList from './CardList/CardList';
 import './Home.css';
-import LeftScroll from '../../Components/Scroll/LeftScroll/LeftScroll';
-import RightScroll from '../../Components/Scroll/RightScroll/RightScroll';
-import CardDescription from '../../Components/CardDescription/CardDescription';
-import AutoComplete from '../../Components/AutoComplete/AutoComplete';
-import DashboardImage from '../../assets/Dashboard/DashboardImage.png';
+import SearchBox from '../../Components/SearchBox/SearchBox'
+import Button from 'react-bootstrap/Button'
+import ControlledCarousel from '../../Components/Carousel/Carousel'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Partners from './Partners/Partners'
+import SearchBar from '../../Components/SearchBar/SearchBar'
 
-class Home extends React.Component{
-
-    constructor(){
-        super()        
-        this.database = app.database().ref('Jobs/JobList/');        
-        this.descriptionDatabase = app.database().ref('Jobs/JobDesc/');
-        this.state = {            
-            searchField: '',
-            description: [],
-            jobs: [],   
-            companyName: "",
-            location:"",
-            urlToImage:"",
-            url:"",
-            name: "",
-            role:"",
-            id:"",
-            desc: "",
-            benefit: "",
-            eduAndWork: "",
-            responsibility: "",
-            skills: "",
-            type: ""        
-        }
-    }
-
-    getData = (data) => {
-        
-        let values = data.val();    
-        const res = values
-        const post = res.filter(item => item)
-        console.log(res);        
-
-        post.forEach(item => {
-            const newJobList = { 
-                companyName: item.companyName,
-                location: item.location,                
-                role: item.role,
-                urlToImage: item.urlToImage,
-                url: item.url,
-                id: item.id
-            }
-
-            this.setState({
-                jobs: [...this.state.jobs, newJobList]
-            });
-        });                
-    }
-
-    getDescriptionData = (data) => {
-        
-        let values = data.val();    
-        const res = values
-        const post = res.filter(item => item)
-        console.log(res);        
-
-        post.forEach(item => {
-            const newJobDescription = { 
-                name: item.companyName,
-                desc: item.desc,
-                benefit: item.benefit,
-                eduAndWork: item.eduAndWork,
-                responsibility: item.responsibility,
-                skills: item.skills,
-                type: item.type
-            }
-
-            this.setState({
-                description: [...this.state.description, newJobDescription]
-            });
-        });                
-    }
-
-    errData = (err) => {
-        console.log("Error");
-        console.log(err);
-    }    
-
-    componentDidMount(){
-        this.database.on('value', this.getData, this.errData);  
-        this.descriptionDatabase.on('value', this.getDescriptionData, this.errData); 
-    }
+const Home = () => {        
   
-    onSearchChange = (event) => {
-        this.setState({
-            searchField: event.target.value
-        });
+    const client = contentful.createClient({
+        space: process.env.REACT_APP_CONTENTFUL_JOBS_SPACE_ID,
+        accessToken: process.env.REACT_APP_CONTENTFUL_JOBS_ACCESS_TOKEN
+    })
+
+    const [jobs, setJobs] = useState([]);
+    const [loading, setLoading] = useState(false);      
+    const [latestJobs] = useState(5);    
+
+    const [jobrole, setJobRole] = useState("")
+    const [jobtype, setJobType] = useState("")
+    const [joblocation, setJobLocation] = useState("")
+    const [userSearch, setUserSearch] = useState("")    
+
+    const companyImageListArr = []; 
+
+    const UserSearch = (value) => {
+        setUserSearch(value)
     }
-//     { this.state.description.map(({value}, i) => {
-//         console.log(value)
-//         if(i === 0){
-//             return <CardDesc key={i} {...this.state.description} />
-//         }
-//     }
-// )}
 
+    const JobRole = (value) => {
+        setJobRole(value)
+    };
 
+    const JobType = (value) => {
+        setJobType(value)
+    };
 
-    render(){        
+    const JobLocation = (value) => {
+        setJobLocation(value)
+    };
 
-        return(
-            <div className="home">
-                <div className="dashboard">
-                    <img className="dashboardImage" src={DashboardImage} alt="Find your Dream Job" />
-                </div>
-                <div className="textWrapper">                                       
-                    <AutoComplete />
-                </div>
-                <div className="homeTest">
-                    <LeftScroll>
-                        <div className="jobLists">
-                            <CardList jobs={this.state.jobs}/>                
-                        </div>                    
-                    </LeftScroll>   
-                    <RightScroll>
-                        <div className="jobDesc">
-                            <CardDescription path={this.props.match.params} desc={this.state.description}/>
-                        </div>  
-                    </RightScroll>                               
+    const handleChange = e => {
+        console.log(e.target.files)
+    }
+
+    useEffect(() => {
+        const fetchPosts = async () =>{
+            setLoading(true);
+            const response = await client.getEntries();
+            setJobs(response.items);
+            setLoading(false); 
+        }         
+        
+        fetchPosts();                        
+    }, []);       
+
+    jobs.forEach(({fields}) => {
+        companyImageListArr.push(fields.companyImage)
+    })        
+
+    return(
+        <div className="home">
+            <div className="dashboard">
+                <ControlledCarousel />
+            </div>
+            <div className="textWrapper">   
+                <p>Find Jobs Better and Faster</p>
+                <SearchBox 
+                    placeholder={"Search Jobs"} 
+                    getUserSearch = {UserSearch}
+                />                
+            </div>
+            <div className="cvWrapper">
+                <div className="cvWrapper_2">
+                    <p>Help us find you a<br></br>better match!</p>
+                    <label className="upload_label" for="upload-cv">Upload CV</label>
+                    <input type="file" id="upload-cv" onChange={handleChange}></input>
                 </div>
             </div>
-            
-        );
-    }
+            <div className="partnersDiv">   
+                <div className="partners">               
+                    <Partners images={companyImageListArr} />
+                </div>
+            </div>
+            <div className="homeTest">
+                <Container>
+                    <Row>
+                        <SearchBar 
+                            getRole={JobRole} 
+                            getType={JobType}
+                            getLocation={JobLocation}
+                            background={'white'}
+                        />
+                    </Row>
+                    {
+                        jobs.map(({fields},i) => {
+                            console.log(fields)
+                            if(i < latestJobs){
+                                if(userSearch != "" && (fields.role.toLowerCase().includes(userSearch.toLowerCase().trim()) || fields.jobType.toLowerCase().includes(userSearch.toLowerCase().trim()) || fields.companyName.toLowerCase().includes(userSearch.toLowerCase().trim()))){
+                                    return <CardList jobs={i} {...fields} />
+                                }else{
+                                    if(fields.role.toLowerCase().includes(jobrole.toLowerCase().trim()) && jobtype == "" && joblocation == ""){                                    
+                                        return <CardList jobs={i} {...fields} />
+                                    }else if(fields.location.toLowerCase().includes(joblocation.toLowerCase().trim()) && jobrole == "" && jobtype == ""){
+                                        return <CardList jobs={i} {...fields} />
+                                    }else if(fields.jobType.toLowerCase().includes(jobtype.toLowerCase().trim()) && jobrole == "" && joblocation == ""){
+                                        return <CardList jobs={i} {...fields} />
+                                    }else if(fields.location.toLowerCase().includes(joblocation.toLowerCase().trim()) && fields.role.toLowerCase().includes(jobrole.toLowerCase().trim()) && jobtype == ""){
+                                        return <CardList jobs={i} {...fields} />
+                                    }else if(fields.jobType.toLowerCase().includes(jobtype.toLowerCase().trim()) && fields.location.toLowerCase().includes(joblocation.toLowerCase().trim()) && jobrole == ""){
+                                        return <CardList jobs={i} {...fields} />
+                                    }else if(fields.jobType.toLowerCase().includes(jobtype.toLowerCase().trim()) && fields.role.toLowerCase().includes(jobrole.toLowerCase().trim()) && joblocation == ""){
+                                        return <CardList jobs={i} {...fields} />
+                                    }else if(fields.jobType.toLowerCase().includes(jobtype.toLowerCase().trim()) && fields.location.toLowerCase().includes(joblocation.toLowerCase().trim()) && fields.role.toLowerCase().includes(jobrole.toLowerCase().trim())){
+                                        return <CardList jobs={i} {...fields} />
+                                    }
+                                }
+                                //return <CardList jobs={i} {...fields} />
+                            }
+                        })
+                    }
+                </Container>                    
+            </div>
+        </div>  
+    );
 }
 
 export default Home;

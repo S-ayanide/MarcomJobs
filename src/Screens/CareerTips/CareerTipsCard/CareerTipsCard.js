@@ -1,12 +1,12 @@
 import React from 'react';
 import './CareerTipsCard.css';
-import Card from 'react-bootstrap/Card'
+import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 import Markdown from 'react-markdown'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 
-const CareerTipsCards = (props) => {
+const CareerTipsCards = (props) => {    
 
     if(props.values % 2 == 0){
         // For even cases -> Display Card on Left and short description on Right
@@ -18,17 +18,7 @@ const CareerTipsCards = (props) => {
                                 pathname: `/careerTips/${props.path}`,
                                 state: { props }
                             }}>
-                        <Card border="light" className="careerTipsCard">
-                            <Card.Img className="infoImage" variant="top" src={props.thumbnail} />
-                            <Card.Body>
-                                <Card.Title>{props.title}</Card.Title>
-                                <Card.Text className="careerSubtitle">
-                                    {props.subtitle}
-                                </Card.Text>
-                                <br></br>
-                                <Button block="true" variant="dark">Read More</Button>
-                            </Card.Body>
-                        </Card> 
+                        <Image src={props.thumbnail} rounded className="careerTipsThumbnail" />                        
                     </Link> 
                 </div>
                 
@@ -72,21 +62,11 @@ const CareerTipsCards = (props) => {
 
                 <div>
                     <Link className="link"
-                            to={{
-                                pathname: `/careerTips/${props.url}`,
-                                state: { props }
-                            }}>
-                        <Card border="light" className="careerTipsCard">
-                            <Card.Img className="infoImage" variant="top" src={props.thumbnail} />
-                            <Card.Body>
-                                <Card.Title>{props.title}</Card.Title>
-                                <Card.Text className="careerSubtitle">
-                                    {props.subtitle}
-                                </Card.Text>
-                                <br></br>
-                                <Button block="true" variant="dark">Read More</Button>
-                            </Card.Body>
-                        </Card> 
+                        to={{
+                            pathname: `/careerTips/${props.url}`,
+                            state: { props }
+                        }}>
+                        <Image src={props.thumbnail} rounded className="careerTipsThumbnail" />
                     </Link> 
                 </div>
                 

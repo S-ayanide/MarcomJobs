@@ -1,0 +1,22 @@
+.react-sharing-button--facebook {
+    border-radius: 100px !important;
+    padding: 7px 7px !important;    
+}
+
+.react-sharing-button--twitter {
+    border-radius: 100px !important;
+    padding: 7px 7px !important;    
+}
+
+.react-sharing-button--reddit {
+    border-radius: 100px !important;
+    padding: 7px 7px !important;    
+}
+
+.react-sharing-button--email {
+    border-radius: 100px !important;
+    padding: 7px 7px !important;    
+}
+.react-sharing-button__text{
+    display: none;
+}

@@ -3,3 +3,11 @@
     left: 50%;
     padding-bottom: 5%;
 }
+
+.jobBody{
+    margin-top: 2.1%;
+}
+
+.pagination{
+    cursor: pointer;
+}
